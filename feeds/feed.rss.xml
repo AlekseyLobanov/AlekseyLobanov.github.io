@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ещё один матблог</title><link>http://likemath.ru/</link><description>Субтитры!</description><atom:link href="http://likemath.ru/feeds/feed.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 05 Dec 2010 19:30:00 +0300</lastBuildDate><item><title>My Первый Review</title><link>http://likemath.ru/posts/2010/12/my-pervyi-review/</link><description>&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
+&lt;p&gt;всё точно хорош! &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;кук?&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="math"&gt;\begin{equation} \label{eq} X^2 \end{equation}&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;The area of a circle is 
+&lt;div class="math"&gt;$$A_\text{c} = (\pi/4) d^2$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;А тут конец&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript ...&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Fri, 03 Dec 2010 10:20:00 +0300</pubDate><guid>tag:likemath.ru,2010-12-03:posts/2010/12/my-pervyi-review/</guid></item><item><title>My super title</title><link>http://likemath.ru/posts/2010/12/my-super-post/</link><description>&lt;p&gt;Short version for index and feeds&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Sun, 05 Dec 2010 19:30:00 +0300</pubDate><guid>tag:likemath.ru,2010-12-03:posts/2010/12/my-super-post/</guid><category>pelican</category><category>publishing</category></item></channel></rss>

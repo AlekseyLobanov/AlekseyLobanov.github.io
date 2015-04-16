@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ещё один матблог</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/review.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2010-12-03T10:20:00+03:00</updated><entry><title>My First Review</title><link href="http://likemath.ru/my-first-review.html" rel="alternate"></link><updated>2010-12-03T10:20:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2010-12-03:my-first-review.html</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
+&lt;p&gt;всё точно хорош! &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;кук?&lt;/p&gt;
+&lt;p&gt;
+&lt;div class="math"&gt;\begin{equation} \label{eq} X^2 \end{equation}&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;The area of a circle is 
+&lt;div class="math"&gt;$$A_\text{c} = (\pi/4) d^2$$&lt;/div&gt;
+&lt;/p&gt;
+&lt;p&gt;А тут конец&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary></entry></feed>

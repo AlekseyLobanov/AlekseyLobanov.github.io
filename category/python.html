@@ -1,74 +1,90 @@
 <!DOCTYPE html>
-<html lang="ru">
 <head>
-    <meta charset="utf-8">
-    <title>Ещё один матблог</title>
-    <meta name="description" content="">
-    <meta name="author" content="Алексей Лобанов">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8" />
+    <!-- Set the viewport width to device width for mobile -->
+    <meta name="viewport" content="width=device-width" />
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML elements -->
-    <!--[if lt IE 9]>
-    <script src="../theme/html5.js"></script>
-    <![endif]-->
+    <title>Ещё один матблог - Python</title>
 
-    <!-- Le styles -->
-    <link href="../theme/bootstrap.min.css" rel="stylesheet">
-    <link href="../theme/bootstrap.min.responsive.css" rel="stylesheet">
-    <link href="../theme/local.css" rel="stylesheet">
-    <link href="../theme/pygments.css" rel="stylesheet">
-
-    <!-- So Firefox can bookmark->"abo this site" -->
-
+    <link rel="stylesheet" href="../theme/css/normalize.css" />
+    <link rel="stylesheet" href="../theme/css/foundation.min.css" />
+    <link rel="stylesheet" href="../theme/css/style.css" />
+    <link rel="stylesheet" href="../theme/css/pygments.css" />	
+    <script src="../theme/js/modernizr.js"></script>
 </head>
 
 <body>
 
-<div class="navbar">
-    <div class="navbar-inner">
-    <div class="container">
-
-         <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-             <span class="icon-bar"></span>
-         </a>
-
-        <a class="brand" href="..">Ещё один матблог</a>
-
-        <div class="nav-collapse">
-        <ul class="nav">
-            
-        </ul>
-        </div>
-        
-    </div>
+<!-- Nav Bar -->
+<nav>
+<div class="top-bar">
+<div class="row">
+    <div class="large-9 large-centered columns">
+	    <h1><a href="..">Ещё один матблог</a></h1>
     </div>
 </div>
+</div>
 
-<div class="container">
-    <div class="content">
-    <div class="row">
+<!-- Show menu items and pages -->
+<div class="row">
+<div class="large-9 columns">
+    <ul class="button-group navigation">
+    <li><a href="feeds/feed.atom.xml" class="button secondary small">feeds</a></li>
+    <li><a href="feeds/tag-%s.atom.xml" class="button secondary small">feed2</a></li>
 
-        <div class="span9">
+    </ul>
+</div>
+</div>
+</nav>
+<!-- End Nav -->
+
+
+<!-- Main Page Content and Sidebar -->
+<div class="row">
+
+    <!-- Main Blog Content -->
+    <div class="large-9 columns">
+        
         
 
-        
+            <article>
+                <a href="../posts/2010/12/my-super-post/"><h3 class="article-title">My super title</h3></a>
+<h6 class="subheader" title="2010-12-03T10:20:00+03:00">Пт. 03 Декабрь 2010
+</h6>
 
 
-    <div class='article'>
-        <div class="content-title">
-            <a href="../my-super-post.html"><h1>My super title</h1></a>
-Пт. 03 Декабрь 2010
+<p>Большое приключение формулы <span class="math">\(e=f(x)\)</span></p>
+<div class="highlight"><pre><span class="code-line"><span class="c"># Local path configuration (can be absolute or relative to fabfile)</span></span>
+<span class="code-line"><span class="n">env</span><span class="o">.</span><span class="n">deploy_path</span> <span class="o">=</span> <span class="s">&#39;output&#39;</span></span>
+<span class="code-line"><span class="n">DEPLOY_PATH</span> <span class="o">=</span> <span class="n">env</span><span class="o">.</span><span class="n">deploy_path</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c"># Remote server configuration</span></span>
+<span class="code-line"><span class="n">production</span> <span class="o">=</span> <span class="s">&#39;root@localhost:22&#39;</span></span>
+<span class="code-line"><span class="n">dest_path</span> <span class="o">=</span> <span class="s">&#39;/var/www&#39;</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="c"># Rackspace Cloud Files configuration settings</span></span>
+<span class="code-line"><span class="n">env</span><span class="o">.</span><span class="n">cloudfiles_username</span> <span class="o">=</span> <span class="s">&#39;my_rackspace_username&#39;</span></span>
+<span class="code-line"><span class="n">env</span><span class="o">.</span><span class="n">cloudfiles_api_key</span> <span class="o">=</span> <span class="s">&#39;my_rackspace_api_key&#39;</span></span>
+<span class="code-line"><span class="n">env</span><span class="o">.</span><span class="n">cloudfiles_container</span> <span class="o">=</span> <span class="s">&#39;my_cloudfiles_container&#39;</span></span>
+<span class="code-line"></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">clean</span><span class="p">():</span></span>
+<span class="code-line">    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isdir</span><span class="p">(</span><span class="n">DEPLOY_PATH</span><span class="p">):</span></span>
+<span class="code-line">        <span class="n">local</span><span class="p">(</span><span class="s">&#39;rm -rf {deploy_path}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">env</span><span class="p">))</span></span>
+<span class="code-line">        <span class="n">local</span><span class="p">(</span><span class="s">&#39;mkdir {deploy_path}&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="o">**</span><span class="n">env</span><span class="p">))</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">build</span><span class="p">():</span></span>
+<span class="code-line">    <span class="n">local</span><span class="p">(</span><span class="s">&#39;pelican -s pelicanconf.py&#39;</span><span class="p">)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">rebuild</span><span class="p">():</span></span>
+<span class="code-line">    <span class="n">clean</span><span class="p">()</span></span>
+<span class="code-line">    <span class="n">build</span><span class="p">()</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="k">def</span> <span class="nf">regenerate</span><span class="p">():</span></span>
+<span class="code-line">    <span class="n">local</span><span class="p">(</span><span class="s">&#39;pelican -r -s pelicanconf.py&#39;</span><span class="p">)</span></span>
+</pre></div>
 
-by <a class="url fn" href="../author/aleksei-lobanov.html">Алексей Лобанов</a>
- 
 
-
- 
-        </div>
-        
-        <div><p>Большое приключение формулы <span class="math">\(e=f(x)\)</span></p>
 <script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
@@ -95,92 +111,77 @@ by <a class="url fn" href="../author/aleksei-lobanov.html">Алексей Лоб
         "}); ";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script></div>
-        <hr />
-    </div>
-		
-<div class="pagination">
-<ul>
-    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+</script><p class="subheader">Category: <a href="../category/python.html">Python</a>
 
-    <li class="active"><a href="../category/python.html">1</a></li>
+    Tagged: 
+    <a href="../tag/pelican.html">pelican </a>
+    <a href="../tag/publishing.html">publishing </a>
+</p>
 
-    <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
-</ul>
+
+<p><a href="../posts/2010/12/my-super-post/#disqus_thread">comments</a></p>            </article>
+
+<div class="pagination-centered">
+<h6 class="subheader">Page 1 of 1</h6>
+
+<p>
+
+</p>
 </div>
- 
-  
-        </div>
-        
-        <div class="span3">
-
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Site
-                </li>
-            
-                <li><a href="../">Archives</a>
-                <li><a href="../tags.html">Tags</a>
 
 
 
+            <!-- /#posts-list -->
 
-            </ul>
-            </div>
+    </div>
+    <!-- End Main Content -->
+
+    <!-- Sidebar -->
+    <aside class="large-3 columns">
+        <h5 class="sidebar-title">Site</h5>
+        <ul class="side-nav">
+            <li><a href="../archives.html">Archives</a>
+            <li><a href="../tags.html">Tags</a>
+            <li><a href="http://likemath.ru/feeds/feed.atom.xml" rel="alternate">Atom feed</a></li>
+            <li><a href="http://likemath.ru/feeds/feed.rss.xml" rel="alternate">RSS feed</a></li>
+        </ul>
+
+		
+        <h5 class="sidebar-title">Categories</h5>
+        <ul class="side-nav">
+            <li><a href="../category/obzor.html">Обзор</a></li>
+            <li><a href="../category/python.html">Python</a></li>
+   
+        </ul>
+
+        <h5 class="sidebar-title">Links</h5>
+        <ul class="side-nav">
+            <li><a href="http://getpelican.com/">Pelican</a></li>
+            <li><a href="#">You can modify those links in your config file</a></li>
+        </ul>
+		
+        <h5 class="sidebar-title">Social</h5>
+        <ul class="side-nav">
+            <li><a href="#">You can add links in your config file</a></li>
+            <li><a href="https://www.odesk.com/users/~0135655bbaa34bf5a8">oDesk</a></li>
+        </ul>
+
+    </aside> <!-- End Sidebar -->
+
+</div> <!-- End Main Content and Sidebar -->
 
 
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Categories
-                </li>
-                
-                <li><a href="../category/python.html">Python</a></li>
-                <li><a href="../category/review.html">Review</a></li>
-                   
-            </ul>
-            </div>
-
-
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Links
-                </li>
-            
-                <li><a href="http://getpelican.com/">Pelican</a></li>
-                <li><a href="http://python.org/">Python.org</a></li>
-                <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                <li><a href="#">You can modify those links in your config file</a></li>
-            </ul>
-            </div>
-
-
-            <div class="social">
-            <div class="well" style="padding: 8px 0; background-color: #FBFBFB;">
-            <ul class="nav nav-list">
-                <li class="nav-header"> 
-                Social
-                </li>
-           
-                <li><a href="#">You can add links in your config file</a></li>
-                <li><a href="#">Another social link</a></li>
-            </ul>
+<!-- Footer -->
+<footer class="row">
+    <div class="large-12 columns">
+        <hr />
+        <div class="row">
+            <div class="large-6 columns">
+              <!--                  <p>Ещё один матблог by Алексей Лобанов</p> -->
             </div>
             </div>
-
-        </div>  
-    </div>     </div> 
-<footer>
-<br />
-<p><a href="..">Ещё один матблог</a> &copy; Алексей Лобанов 2012</p>
+    </div>
 </footer>
-
-</div> <!-- /container -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-<script src="http://twitter.github.com/bootstrap/assets/js/bootstrap-collapse.js"></script>
- 
 </body>
 </html>
