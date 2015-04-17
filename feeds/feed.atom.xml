@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Ещё один матблог</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/feed.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2010-12-05T19:30:00+03:00</updated><entry><title>My Первый Review</title><link href="http://likemath.ru/posts/2010/12/my-pervyi-review/" rel="alternate"></link><updated>2010-12-03T10:20:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2010-12-03:posts/2010/12/my-pervyi-review/</id><summary type="html">&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
-&lt;p&gt;всё точно хорош! &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;кук?&lt;/p&gt;
-&lt;p&gt;
-&lt;div class="math"&gt;\begin{equation} \label{eq} X^2 \end{equation}&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;The area of a circle is 
-&lt;div class="math"&gt;$$A_\text{c} = (\pi/4) d^2$$&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;А тут конец&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Ещё один матблог</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/feed.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2015-04-17T13:35:00+03:00</updated><entry><title>Мой первый пост</title><link href="http://likemath.ru/posts/moi-pervyi-post/" rel="alternate"></link><updated>2015-04-17T13:35:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2015-04-17:posts/moi-pervyi-post/</id><summary type="html">&lt;p&gt;Кратко о том, почему я сделал&amp;nbsp;блог.&lt;/p&gt;</summary><category term="блог"></category></entry><entry><title>Просто пост о шахматах</title><link href="http://likemath.ru/posts/prosto-post-o-shakhmatakh/" rel="alternate"></link><updated>2011-06-05T19:30:00+04:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2011-05-03:posts/prosto-post-o-shakhmatakh/</id><summary type="html">&lt;p&gt;Шахматы коротко &lt;span class="math"&gt;\(2+2=5\)&lt;/span&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
-    mathjaxscript ...&lt;/script&gt;</summary></entry><entry><title>My super title</title><link href="http://likemath.ru/posts/2010/12/my-super-post/" rel="alternate"></link><updated>2010-12-05T19:30:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2010-12-03:posts/2010/12/my-super-post/</id><summary type="html">&lt;p&gt;Short version for index and feeds&lt;/p&gt;</summary><category term="pelican"></category><category term="publishing"></category></entry></feed>
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="chess"></category><category term="publishing"></category></entry><entry><title>My super title</title><link href="http://likemath.ru/posts/my-super-title/" rel="alternate"></link><updated>2010-12-05T19:30:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2010-12-03:posts/my-super-title/</id><summary type="html">&lt;p&gt;Short version for index and&amp;nbsp;feeds&lt;/p&gt;</summary><category term="pelican"></category></entry></feed>

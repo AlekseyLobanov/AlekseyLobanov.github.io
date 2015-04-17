@@ -1,14 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ещё один матблог</title><link>http://likemath.ru/</link><description></description><atom:link href="http://likemath.ru/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Sun, 05 Dec 2010 19:30:00 +0300</lastBuildDate><item><title>My Первый Review</title><link>http://likemath.ru/posts/2010/12/my-pervyi-review/</link><description>&lt;p&gt;Following is a review of my favorite mechanical keyboard.&lt;/p&gt;
-&lt;p&gt;всё точно хорош! &lt;span class="math"&gt;\(e=mc^2\)&lt;/span&gt;&lt;/p&gt;
-&lt;p&gt;кук?&lt;/p&gt;
-&lt;p&gt;
-&lt;div class="math"&gt;\begin{equation} \label{eq} X^2 \end{equation}&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;The area of a circle is 
-&lt;div class="math"&gt;$$A_\text{c} = (\pi/4) d^2$$&lt;/div&gt;
-&lt;/p&gt;
-&lt;p&gt;А тут конец&lt;/p&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Ещё один матблог</title><link>http://likemath.ru/</link><description>Project Euler и остальное</description><atom:link href="http://likemath.ru/feeds/all.rss.xml" rel="self"></atom:link><lastBuildDate>Fri, 17 Apr 2015 13:35:00 +0300</lastBuildDate><item><title>Мой первый пост</title><link>http://likemath.ru/posts/moi-pervyi-post/</link><description>&lt;p&gt;Кратко о том, почему я сделал&amp;nbsp;блог.&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Fri, 17 Apr 2015 13:35:00 +0300</pubDate><guid>tag:likemath.ru,2015-04-17:posts/moi-pervyi-post/</guid><category>блог</category></item><item><title>Просто пост о шахматах</title><link>http://likemath.ru/posts/prosto-post-o-shakhmatakh/</link><description>&lt;p&gt;Шахматы коротко &lt;span class="math"&gt;\(2+2=5\)&lt;/span&gt;&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
-    mathjaxscript ...&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Fri, 03 Dec 2010 10:20:00 +0300</pubDate><guid>tag:likemath.ru,2010-12-03:posts/2010/12/my-pervyi-review/</guid></item><item><title>My super title</title><link>http://likemath.ru/posts/2010/12/my-super-post/</link><description>&lt;p&gt;Short version for index and feeds&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Sun, 05 Dec 2010 19:30:00 +0300</pubDate><guid>tag:likemath.ru,2010-12-03:posts/2010/12/my-super-post/</guid><category>pelican</category><category>publishing</category></item></channel></rss>
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Sun, 05 Jun 2011 19:30:00 +0400</pubDate><guid>tag:likemath.ru,2011-05-03:posts/prosto-post-o-shakhmatakh/</guid><category>chess</category><category>publishing</category></item><item><title>My super title</title><link>http://likemath.ru/posts/my-super-title/</link><description>&lt;p&gt;Short version for index and&amp;nbsp;feeds&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Sun, 05 Dec 2010 19:30:00 +0300</pubDate><guid>tag:likemath.ru,2010-12-03:posts/my-super-title/</guid><category>pelican</category></item></channel></rss>
