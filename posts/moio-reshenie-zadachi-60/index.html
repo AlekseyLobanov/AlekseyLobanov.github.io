@@ -55,7 +55,7 @@
                 <article class="post-entry">
                     <header class="entry-header">
                         <time class="post-time" datetime="2015-07-17T17:40:00+03:00" pubdate>
-                            Пт. 17 Июль 2015
+                            Пт 17 Июль 2015
                         </time>
                         <a href="../../posts/moio-reshenie-zadachi-60/" rel="bookmark"><h1>Моё решение задачи&nbsp;60</h1></a>
                     </header>
@@ -67,15 +67,15 @@
 <p>Пусть мы получили набор таких разбиений, то есть набор пар вида <span class="math">\(\left( p, q \right)\)</span>. Давайте составим из них граф, где вершинки это простые числа, а ориентированное ребро из <span class="math">\(p\)</span> в <span class="math">\(q\)</span> означает, что есть пара <span class="math">\(\left( p, q \right)\)</span>. Из того, что порядок склеивания чисел произвольный сразу следует, что рассматриваемый граф должен быть неориентированным. Таким образом, все пары <span class="math">\(\left( p, q \right)\)</span> для которых нет пары <span class="math">\(\left( q, p \right)\)</span> необходимо выкинуть, а из оставшихся построить&nbsp;граф.</p>
 <p>Теперь задача стало гораздо понятнее: достаточно выбрать клику размера 5, что сумма значений её вершин минимальна. В общем случае, это достаточно ресурсоёмкая(как мне кажется) задача, но в реальном графе количество рёбер не слишком большое. В худшем случае, по теореме Турана, количество рёбер в графе лишь с одной такой кликой примерно на 10% меньше числа рёбер в полном&nbsp;графе.</p>
 <p>Непосредственно сам поиск такой клики можно реализовать тривиально. Ниже мой код на C++11 с использованием библиотеки Boost Graph Library (<span class="caps">BGL</span>).</p>
-<div class="highlight"><pre><span class="code-line"><span class="cp">#include &lt;iostream&gt;</span></span>
-<span class="code-line"><span class="cp">#include &lt;algorithm&gt;</span></span>
-<span class="code-line"><span class="cp">#include &lt;vector&gt;</span></span>
-<span class="code-line"><span class="cp">#include &lt;set&gt;</span></span>
-<span class="code-line"><span class="cp">#include &lt;map&gt;</span></span>
-<span class="code-line"><span class="cp">#include &lt;cstdint&gt;</span></span>
+<div class="highlight"><pre><span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp"></span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;map&gt;</span><span class="cp"></span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span><span class="cp"></span></span>
 <span class="code-line"></span>
-<span class="code-line"><span class="cp">#include &lt;boost/graph/adjacency_list.hpp&gt;</span></span>
-<span class="code-line"><span class="cp">#include &quot;primesieve.hpp&quot;</span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;boost/graph/adjacency_list.hpp&gt;</span><span class="cp"></span></span>
+<span class="code-line"><span class="cp">#include</span> <span class="cpf">&quot;primesieve.hpp&quot;</span><span class="cp"></span></span>
 <span class="code-line"></span>
 <span class="code-line"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span></span>
 <span class="code-line"><span class="k">using</span> <span class="k">namespace</span> <span class="n">boost</span><span class="p">;</span></span>
@@ -125,7 +125,7 @@
 <span class="code-line"><span class="kt">void</span> <span class="n">delBadEdges</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">edges</span><span class="p">){</span></span>
 <span class="code-line">    <span class="n">map</span><span class="o">&lt;</span> <span class="kt">int64_t</span><span class="p">,</span> <span class="kt">int</span> <span class="o">&gt;</span> <span class="n">mults</span><span class="p">;</span> <span class="c1">// contains counts of p * q</span></span>
 <span class="code-line"></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">p</span><span class="o">:</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">p</span><span class="p">:</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span></span>
 <span class="code-line">        <span class="kt">int64_t</span> <span class="n">key</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">first</span> <span class="o">*</span> <span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">;</span></span>
 <span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="n">mults</span><span class="p">.</span><span class="n">find</span><span class="p">(</span><span class="n">key</span><span class="p">)</span> <span class="o">!=</span> <span class="n">mults</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="p">)</span></span>
 <span class="code-line">            <span class="n">mults</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span></span>
@@ -133,7 +133,7 @@
 <span class="code-line">            <span class="n">mults</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span></span>
 <span class="code-line">    <span class="p">}</span></span>
 <span class="code-line">    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">p</span><span class="o">:</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">p</span><span class="p">:</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span></span>
 <span class="code-line">        <span class="kt">int64_t</span> <span class="n">key</span> <span class="o">=</span> <span class="n">p</span><span class="p">.</span><span class="n">first</span> <span class="o">*</span> <span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">;</span></span>
 <span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="n">mults</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">==</span> <span class="mi">2</span> <span class="p">){</span></span>
 <span class="code-line">            <span class="n">res</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">p</span><span class="p">);</span></span>
@@ -147,7 +147,7 @@
 <span class="code-line"><span class="k">template</span> <span class="o">&lt;</span><span class="k">class</span> <span class="nc">T</span><span class="o">&gt;</span> </span>
 <span class="code-line"><span class="n">set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">getUniqNums</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span><span class="n">T</span><span class="p">,</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">edges</span><span class="p">){</span></span>
 <span class="code-line">    <span class="n">set</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">res</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">p</span><span class="o">:</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">p</span><span class="p">:</span> <span class="n">edges</span><span class="p">)</span> <span class="p">{</span></span>
 <span class="code-line">        <span class="n">res</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">first</span><span class="p">);</span></span>
 <span class="code-line">        <span class="n">res</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">);</span>        </span>
 <span class="code-line">    <span class="p">}</span></span>
@@ -163,7 +163,7 @@
 <span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">e_it</span> <span class="o">=</span> <span class="n">edges</span><span class="p">.</span><span class="n">first</span><span class="p">;</span> <span class="n">e_it</span> <span class="o">!=</span> <span class="n">edges</span><span class="p">.</span><span class="n">second</span><span class="p">;</span> <span class="o">++</span><span class="n">e_it</span><span class="p">)</span></span>
 <span class="code-line">        <span class="n">adj_verts</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">target</span><span class="p">(</span><span class="o">*</span><span class="n">e_it</span><span class="p">,</span><span class="n">g</span><span class="p">));</span></span>
 <span class="code-line"></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">prev_v</span><span class="o">:</span> <span class="n">cur_set</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">prev_v</span><span class="p">:</span> <span class="n">cur_set</span><span class="p">)</span></span>
 <span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="n">find</span><span class="p">(</span><span class="n">adj_verts</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">adj_verts</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">prev_v</span><span class="p">)</span> <span class="o">==</span> <span class="n">adj_verts</span><span class="p">.</span><span class="n">end</span><span class="p">()</span> <span class="p">)</span></span>
 <span class="code-line">            <span class="k">return</span><span class="p">;</span></span>
 <span class="code-line"></span>
@@ -174,7 +174,7 @@
 <span class="code-line">        <span class="k">return</span><span class="p">;</span></span>
 <span class="code-line">    <span class="p">}</span></span>
 <span class="code-line"></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">v</span><span class="o">:</span> <span class="n">adj_verts</span><span class="p">){</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">v</span><span class="p">:</span> <span class="n">adj_verts</span><span class="p">){</span></span>
 <span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">vert_prime</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">vert_prime</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">st</span><span class="p">))</span> <span class="p">)</span></span>
 <span class="code-line">            <span class="k">continue</span><span class="p">;</span></span>
 <span class="code-line">        <span class="n">getNeedSet</span><span class="p">(</span><span class="n">g</span><span class="p">,</span><span class="n">v</span><span class="p">,</span><span class="n">depth</span> <span class="o">-</span> <span class="mi">1</span><span class="p">,</span> <span class="n">cur_set</span><span class="p">,</span> <span class="n">vert_prime</span><span class="p">,</span> <span class="n">v_out</span><span class="p">);</span></span>
@@ -191,7 +191,7 @@
 <span class="code-line">    <span class="n">v_primes</span><span class="p">.</span><span class="n">clear</span><span class="p">();</span></span>
 <span class="code-line"></span>
 <span class="code-line">    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">pair</span><span class="o">&lt;</span> <span class="kt">long</span><span class="p">,</span><span class="kt">long</span> <span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">all_edges</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">pr</span><span class="o">:</span> <span class="n">s_primes</span><span class="p">){</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">pr</span><span class="p">:</span> <span class="n">s_primes</span><span class="p">){</span></span>
 <span class="code-line">        <span class="k">auto</span> <span class="n">t_v</span> <span class="o">=</span> <span class="n">getPrimePairs</span><span class="p">(</span><span class="n">pr</span><span class="p">,</span> <span class="n">s_primes</span><span class="p">);</span></span>
 <span class="code-line">        <span class="n">copy</span><span class="p">(</span><span class="n">t_v</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span><span class="n">t_v</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span><span class="n">back_inserter</span><span class="p">(</span><span class="n">all_edges</span><span class="p">));</span></span>
 <span class="code-line">    <span class="p">}</span></span>
@@ -203,13 +203,13 @@
 <span class="code-line">    <span class="n">map</span><span class="o">&lt;</span> <span class="n">Graph</span><span class="o">::</span><span class="n">vertex_descriptor</span><span class="p">,</span> <span class="kt">long</span> <span class="o">&gt;</span> <span class="n">vert_prime</span><span class="p">;</span></span>
 <span class="code-line">    <span class="n">map</span><span class="o">&lt;</span> <span class="kt">long</span><span class="p">,</span> <span class="n">Graph</span><span class="o">::</span><span class="n">vertex_descriptor</span> <span class="o">&gt;</span> <span class="n">prime_vert</span><span class="p">;</span></span>
 <span class="code-line">    <span class="n">Graph</span> <span class="n">g</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">pr</span><span class="o">:</span> <span class="n">s_primes</span><span class="p">){</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">pr</span><span class="p">:</span> <span class="n">s_primes</span><span class="p">){</span></span>
 <span class="code-line">        <span class="n">vert_prime</span><span class="p">[</span><span class="n">add_vertex</span><span class="p">(</span><span class="n">g</span><span class="p">)]</span> <span class="o">=</span> <span class="n">pr</span><span class="p">;</span></span>
 <span class="code-line">    <span class="p">}</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">v</span><span class="o">:</span> <span class="n">vert_prime</span><span class="p">){</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">v</span><span class="p">:</span> <span class="n">vert_prime</span><span class="p">){</span></span>
 <span class="code-line">        <span class="n">prime_vert</span><span class="p">[</span><span class="n">v</span><span class="p">.</span><span class="n">second</span><span class="p">]</span> <span class="o">=</span> <span class="n">v</span><span class="p">.</span><span class="n">first</span><span class="p">;</span></span>
 <span class="code-line">    <span class="p">}</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">p</span><span class="o">:</span> <span class="n">all_edges</span><span class="p">)</span></span>
+<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">p</span><span class="p">:</span> <span class="n">all_edges</span><span class="p">)</span></span>
 <span class="code-line">        <span class="n">add_edge</span><span class="p">(</span><span class="n">prime_vert</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">first</span><span class="p">),</span><span class="n">prime_vert</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">p</span><span class="p">.</span><span class="n">second</span><span class="p">),</span><span class="n">g</span><span class="p">);</span></span>
 <span class="code-line">    <span class="k">auto</span> <span class="n">all_vertices</span> <span class="o">=</span> <span class="n">vertices</span><span class="p">(</span><span class="n">g</span><span class="p">);</span></span>
 <span class="code-line">    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">set</span><span class="o">&lt;</span><span class="n">Graph</span><span class="o">::</span><span class="n">vertex_descriptor</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">goods</span><span class="p">;</span></span>
@@ -220,7 +220,7 @@
 <span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">goods</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span></span>
 <span class="code-line">        <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Good set #&quot;</span> <span class="o">&lt;&lt;</span> <span class="n">i</span><span class="o">+</span><span class="mi">1</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;: &quot;</span><span class="p">;</span></span>
 <span class="code-line">        <span class="kt">size_t</span> <span class="n">cur_sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></span>
-<span class="code-line">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="n">el</span><span class="o">:</span> <span class="n">goods</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span></span>
+<span class="code-line">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="nl">el</span><span class="p">:</span> <span class="n">goods</span><span class="p">[</span><span class="n">i</span><span class="p">]){</span></span>
 <span class="code-line">            <span class="n">el</span> <span class="o">=</span> <span class="n">vert_prime</span><span class="p">.</span><span class="n">at</span><span class="p">(</span><span class="n">el</span><span class="p">);</span></span>
 <span class="code-line">            <span class="n">cur_sum</span> <span class="o">+=</span> <span class="n">el</span><span class="p">;</span></span>
 <span class="code-line">            <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">el</span> <span class="o">&lt;&lt;</span> <span class="s">&quot; &quot;</span><span class="p">;</span></span>
