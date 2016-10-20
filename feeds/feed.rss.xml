@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0"><channel><title>Блог 529</title><link>http://likemath.ru/</link><description>Project Euler и остальное</description><lastBuildDate>Fri, 22 Jul 2016 13:35:00 +0300</lastBuildDate><item><title>Нахождение суммы k-ых степеней</title><link>http://likemath.ru/posts/nakhozhdenie-summy-k-ykh-stepenei/</link><description>&lt;p&gt;Как придумать формулу для суммы &lt;span class="math"&gt;\(1^5 + 2^5 + 3^5 + \ldots + n^5\)&lt;/span&gt; и есть ли она&amp;nbsp;вообще?&lt;/p&gt;
+<rss version="2.0"><channel><title>Блог 529</title><link>http://likemath.ru/</link><description>Project Euler и остальное</description><lastBuildDate>Fri, 21 Oct 2016 17:40:00 +0300</lastBuildDate><item><title>Моё решение задачи 146</title><link>http://likemath.ru/posts/moio-reshenie-zadachi-146/</link><description>&lt;p&gt;Краткое условие: необходимо найти сумму всех натуральных &lt;span class="math"&gt;\(n\)&lt;/span&gt;, что &lt;span class="math"&gt;\(n^2+1\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+3\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+7\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+9\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+13\)&lt;/span&gt;, и &lt;span class="math"&gt;\(n^2+27\)&lt;/span&gt; будут последовательными простыми&amp;nbsp;числами.&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">Алексей Лобанов</dc:creator><pubDate>Fri, 21 Oct 2016 17:40:00 +0300</pubDate><guid isPermaLink="false">tag:likemath.ru,2016-10-21:posts/moio-reshenie-zadachi-146/</guid><category>Project Euler</category><category>c++</category><category>FLINT</category></item><item><title>Нахождение суммы k-ых степеней</title><link>http://likemath.ru/posts/nakhozhdenie-summy-k-ykh-stepenei/</link><description>&lt;p&gt;Как придумать формулу для суммы &lt;span class="math"&gt;\(1^5 + 2^5 + 3^5 + \ldots + n^5\)&lt;/span&gt; и есть ли она&amp;nbsp;вообще?&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
