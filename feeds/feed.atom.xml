@@ -1,5 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Блог 529</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/feed.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2016-10-21T17:40:00+03:00</updated><entry><title>Моё решение задачи 146</title><link href="http://likemath.ru/posts/moio-reshenie-zadachi-146/" rel="alternate"></link><published>2016-10-21T17:40:00+03:00</published><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-10-21:posts/moio-reshenie-zadachi-146/</id><summary type="html">&lt;p&gt;Краткое условие: необходимо найти сумму всех натуральных &lt;span class="math"&gt;\(n\)&lt;/span&gt;, что &lt;span class="math"&gt;\(n^2+1\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+3\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+7\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+9\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+13\)&lt;/span&gt;, и &lt;span class="math"&gt;\(n^2+27\)&lt;/span&gt; будут последовательными простыми&amp;nbsp;числами.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Блог 529</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/feed.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2016-10-30T17:40:00+03:00</updated><entry><title>Моё решение задачи 134</title><link href="http://likemath.ru/posts/moio-reshenie-zadachi-134/" rel="alternate"></link><published>2016-10-30T17:40:00+03:00</published><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-10-30:posts/moio-reshenie-zadachi-134/</id><summary type="html">&lt;p&gt;Краткое условие: назовём &lt;em&gt;порождающим&lt;/em&gt; для двух последовательных простых &lt;span class="math"&gt;\(p_1 &amp;lt; p_2\)&lt;/span&gt; наименьшее натуральное число, что оно закачивается на &lt;span class="math"&gt;\(p_1\)&lt;/span&gt; и при этом делится на &lt;span class="math"&gt;\(p_2\)&lt;/span&gt;. Необходимо найти сумму порождающих для всех &lt;span class="math"&gt;\(p_1 \in \left[ 5; 10^6&amp;nbsp;\right]\)&lt;/span&gt;&lt;/p&gt;
+&lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: 'center'," +
+        "    displayIndent: '0em'," +
+        "    showMathMenu: true," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
+        "    } " +
+        "}); ";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="Project Euler"></category><category term="Python"></category><category term="sympy"></category></entry><entry><title>Моё решение задачи 146</title><link href="http://likemath.ru/posts/moio-reshenie-zadachi-146/" rel="alternate"></link><published>2016-10-21T17:40:00+03:00</published><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-10-21:posts/moio-reshenie-zadachi-146/</id><summary type="html">&lt;p&gt;Краткое условие: необходимо найти сумму всех натуральных &lt;span class="math"&gt;\(n\)&lt;/span&gt;, что &lt;span class="math"&gt;\(n^2+1\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+3\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+7\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+9\)&lt;/span&gt;, &lt;span class="math"&gt;\(n^2+13\)&lt;/span&gt;, и &lt;span class="math"&gt;\(n^2+27\)&lt;/span&gt; будут последовательными простыми&amp;nbsp;числами.&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
