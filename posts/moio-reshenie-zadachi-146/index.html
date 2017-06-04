@@ -1,7 +1,7 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"> <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Моё решение задачи 146</title><meta name="description" content><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="../../theme/css/normalize.css"><link href="http://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Forum&subset=cyrillic" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css"><link rel="stylesheet" href="../../theme/css/font-awesome.min.css"><link rel="stylesheet" href="../../theme/css/main.css"><link rel="stylesheet" href="../../theme/css/blog.css"><link rel="stylesheet" href="../../theme/css/github.css"><link href="http://likemath.ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Блог 529 Atom Feed"><link href="http://likemath.ru/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Блог 529 RSS Feed"><script src="../../theme/js/vendor/modernizr-2.6.2.min.js"></script></head><body><!--[if lt IE 7]>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"> <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Моё решение задачи 146</title><meta name="description" content><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="../../theme/css/normalize.css"><link href="http://fonts.googleapis.com/css?family=Philosopher&subset=latin,cyrillic" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Forum&subset=cyrillic" rel="stylesheet" type="text/css"><link href="//fonts.googleapis.com/css?family=Oswald" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Ubuntu+Mono" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet" type="text/css"><link rel="stylesheet" href="../../theme/css/font-awesome.min.css"><link rel="stylesheet" href="../../theme/css/main.css"><link rel="stylesheet" href="../../theme/css/blog.css"><link rel="stylesheet" href="../../theme/css/github.css"><link href="http://likemath.ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Блог 529 Atom Feed"><link href="http://likemath.ru/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Блог 529 RSS Feed"><script src="../../theme/js/vendor/modernizr-2.6.2.min.js"></script></head><body><!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]--><div id="wrapper"><header id="sidebar" class="side-shadow"><hgroup id="site-header"><a id="site-title" href="../.."><h2><i class="icon-pencil"></i> Блог 529</h2></a><p id="site-desc"> Project Euler и остальное </p></hgroup><nav><ul id="nav-links"><li><a href="../../">Главная</a></li><li><a href="../../pages/projects.html">Мои проекты</a></li><li><a href="../../pages/about.html">Об авторе</a></li><li><a href="../../feeds/feed.atom.xml">Atom feed</a></li></ul></nav><footer id="site-info"><p> Powered by Pelican. </p></footer></header><div id="post-container"><ol id="post-list"><li><article class="post-entry"><header class="entry-header"><time class="post-time" datetime="2016-10-21T17:40:00+03:00" pubdate> Пт 21 Октябрь 2016 </time><a href="../../posts/moio-reshenie-zadachi-146/" rel="bookmark"><h1>Моё решение задачи&nbsp;146</h1></a></header><section class="post-content"><p>Необходимо найти сумму всех натуральных <span class="math">\(n\)</span>, что <span class="math">\(n^2+1\)</span>, <span class="math">\(n^2+3\)</span>, <span class="math">\(n^2+7\)</span>, <span class="math">\(n^2+9\)</span>, <span class="math">\(n^2+13\)</span>, и <span class="math">\(n^2+27\)</span> будут <em>последовательными</em> простыми&nbsp;числами.</p><p>Полное условие можно найти <a href="https://projecteuler.net/problem=146">тут</a></p><p>Хочется отметить, что сложность у задачи 50%, а на текущий момент её решило меньше 4000 человек. Тем не менее, мне она показалось простой. Простейшее решение отработало очень&nbsp;быстро.</p><p>Для начала, можно отметить, что в лоб проверять условие очень долго. Проверять на простоту числа порядка <span class="math">\(10^{15}\)</span> достаточно сложно, поэтому их нужно как-то&nbsp;отсеять.</p><p>Самое простое &#8212; не рассматривать те <span class="math">\(n\)</span>, что хотя бы одно из <span class="math">\(n^2+1\)</span>, <span class="math">\(n^2+3\)</span>, <span class="math">\(n^2+7\)</span>, <span class="math">\(n^2+9\)</span>, <span class="math">\(n^2+13\)</span>, и <span class="math">\(n^2+27\)</span> будет заведомо делиться на какое-то маленькое простое число. Это даёт достаточно хорошие результаты: из 150 миллионов чисел, после отсеивания по простым числам <span class="math">\(&lt; 3000\)</span> (этот параметр я подбирал уже после решения задач: если он слишком маленький, то будет слишком много проверок на простоту, если же слишком большой, то мы делаем слишком много работы, чтобы отсеять несколько чисел), останется меньше <span class="math">\(2000\)</span> чисел. Их уже можно проверить&nbsp;непосредственно. </p><p>Тогда алгоритм может быть&nbsp;таким:</p><ol><li>Находим простые числа меньше <span class="math">\(3000\)</span>.</li><li>Для каждого из них находим допустимые&nbsp;остатки.</li><li>Для каждого из чисел от <span class="math">\(1\)</span> до <span class="math">\(n\)</span> проверяем, что остатки по всем простым&nbsp;хорошие.</li><li>Непосредственно проверяем условие. Важно не забыть проверить <strong>не</strong>простоту оставшихся нечётных чисел из диапазона <span class="math">\(n^2 + 1 \ldots n^2 + 27\)</span> там могут быть (и будут!) другие простые&nbsp;числа.</li></ol><p>Непосредственно сам поиск такой клики можно реализовать тривиально. Ниже мой код на C++11 с использованием библиотек Flint и primesieve. Распараллеливание хоть и просится, но смысла не имеет, т.к. я получил ответ менее, чем за 5&nbsp;секунд.</p><div class="highlight"><pre><span class="code-line"><span class="cm">/*</span></span>
+        <![endif]--><div id="wrapper"><header id="sidebar" class="side-shadow"><hgroup id="site-header"><a id="site-title" href="../.."><h2><i class="icon-pencil"></i> Блог 529</h2></a><p id="site-desc"> Project Euler и остальное </p></hgroup><nav><ul id="nav-links"><li><a href="../../">Главная</a></li><li><a href="../../pages/projects.html">Мои проекты</a></li><li><a href="../../pages/about.html">Об авторе</a></li><li><a href="../../feeds/feed.atom.xml">Atom feed</a></li></ul></nav><footer id="site-info"><p> Powered by Pelican. </p></footer></header><div id="post-container"><ol id="post-list"><li><article class="post-entry"><header class="entry-header"><time class="post-time" datetime="2016-10-21T17:40:00+03:00" pubdate> Пт 21 Октябрь 2016 </time><a href="../../posts/moio-reshenie-zadachi-146/" rel="bookmark"><h1>Моё решение задачи&nbsp;146</h1></a></header><section class="post-content"><p>Необходимо найти сумму всех натуральных <span class="math">\(n\)</span>, что <span class="math">\(n^2+1\)</span>, <span class="math">\(n^2+3\)</span>, <span class="math">\(n^2+7\)</span>, <span class="math">\(n^2+9\)</span>, <span class="math">\(n^2+13\)</span>, и <span class="math">\(n^2+27\)</span> будут <em>последовательными</em> простыми&nbsp;числами.</p><p>Полное условие можно найти <a href="https://projecteuler.net/problem=146">тут</a></p><p>Хочется отметить, что сложность у задачи 50%, а на текущий момент её решило меньше 4000 человек. Тем не менее, мне она показалось простой. Простейшее решение отработало очень&nbsp;быстро.</p><p>Для начала, можно отметить, что в лоб проверять условие очень долго. Проверять на простоту числа порядка <span class="math">\(10^{15}\)</span> достаточно сложно, поэтому их нужно как-то&nbsp;отсеять.</p><p>Самое простое &#8212; не рассматривать те <span class="math">\(n\)</span>, что хотя бы одно из <span class="math">\(n^2+1\)</span>, <span class="math">\(n^2+3\)</span>, <span class="math">\(n^2+7\)</span>, <span class="math">\(n^2+9\)</span>, <span class="math">\(n^2+13\)</span>, и <span class="math">\(n^2+27\)</span> будет заведомо делиться на какое-то маленькое простое число. Это даёт достаточно хорошие результаты: из 150 миллионов чисел, после отсеивания по простым числам <span class="math">\(&lt; 3000\)</span> (этот параметр я подбирал уже после решения задач: если он слишком маленький, то будет слишком много проверок на простоту, если же слишком большой, то мы делаем слишком много работы, чтобы отсеять несколько чисел), останется меньше <span class="math">\(2000\)</span> чисел. Их уже можно проверить&nbsp;непосредственно. </p><p>Тогда алгоритм может быть&nbsp;таким:</p><ol><li>Находим простые числа меньше <span class="math">\(3000\)</span>.</li><li>Для каждого из них находим допустимые&nbsp;остатки.</li><li>Для каждого из чисел от <span class="math">\(1\)</span> до <span class="math">\(n\)</span> проверяем, что остатки по всем простым&nbsp;хорошие.</li><li>Непосредственно проверяем условие. Важно не забыть проверить <strong>не</strong>простоту оставшихся нечётных чисел из диапазона <span class="math">\(n^2 + 1 \ldots n^2 + 27\)</span> там могут быть (и будут!) другие простые&nbsp;числа.</li></ol><p>Непосредственно сам поиск такой клики можно реализовать тривиально. Ниже мой код на C++11 с использованием библиотек Flint и primesieve. Распараллеливание хоть и просится, но смысла не имеет, т.к. я получил ответ менее, чем за 5&nbsp;секунд.</p><div class="highlight"><pre><span class="code-line"><span></span><span class="cm">/*</span></span>
 <span class="code-line"><span class="cm"> * Problem 146 on Project Euler</span></span>
 <span class="code-line"><span class="cm"> * Aleksey Lobanov (c) 2016</span></span>
 <span class="code-line"><span class="cm"> */</span></span>
@@ -108,19 +108,30 @@
 <span class="code-line">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></span>
 <span class="code-line"><span class="p">}</span></span>
 </pre></div><p>Ответ: <strong>676333270</strong></p><script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width < 768) ? "left" : align;
+        indent = (screen.width < 768) ? "0em" : indent;
+        linebreak = (screen.width < 768) ? 'true' : linebreak;
+    }
+
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
         "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: 'center'," +
-        "    displayIndent: '0em'," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
         "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
         "    tex2jax: { " +
         "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
         "        displayMath: [ ['$$','$$'] ]," +
@@ -128,19 +139,29 @@
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
-        "    } " +
-        "}); ";
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script></section><hr><aside class="post-meta"><p>Категория: <a href="../../category/project-euler.html">Project Euler</a></p><p>Теги: <a href="../../tag/project-euler.html">Project Euler</a>, <a href="../../tag/c.html">c++</a>, <a href="../../tag/flint.html">FLINT</a>, </p></aside><hr><div class="comments"><div id="disqus_thread"></div><script type="text/javascript">
-        var disqus_shortname = 'likemath';
-        (function() {
-            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-        })();
-    </script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a></div></article></li></ol></div></div><script>
+</script></section><hr><aside class="post-meta"><p>Категория: <a href="../../category/project-euler.html">Project Euler</a></p><p>Теги: <a href="../../tag/project-euler.html">Project Euler</a>, <a href="../../tag/c.html">c++</a>, <a href="../../tag/flint.html">FLINT</a>, </p></aside><hr></article></li></ol></div></div><script>
     var _gaq=[['_setAccount','UA-62001537-1'],['_trackPageview']];
     (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
     g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';

@@ -1,19 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>Блог 529</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/misc.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2016-07-22T13:35:00+03:00</updated><entry><title>Нахождение суммы k-ых степеней</title><link href="http://likemath.ru/posts/nakhozhdenie-summy-k-ykh-stepenei/" rel="alternate"></link><published>2016-07-22T13:35:00+03:00</published><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-07-22:posts/nakhozhdenie-summy-k-ykh-stepenei/</id><summary type="html">&lt;p&gt;Как придумать формулу для суммы &lt;span class="math"&gt;\(1^5 + 2^5 + 3^5 + \ldots + n^5\)&lt;/span&gt; и есть ли она&amp;nbsp;вообще?&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Блог 529</title><link href="http://likemath.ru/" rel="alternate"></link><link href="http://likemath.ru/feeds/misc.atom.xml" rel="self"></link><id>http://likemath.ru/</id><updated>2016-07-22T13:35:00+03:00</updated><entry><title>Нахождение суммы k-ых степеней</title><link href="http://likemath.ru/posts/nakhozhdenie-summy-k-ykh-stepenei/" rel="alternate"></link><published>2016-07-22T13:35:00+03:00</published><updated>2016-07-22T13:35:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-07-22:posts/nakhozhdenie-summy-k-ykh-stepenei/</id><summary type="html">&lt;p&gt;Как придумать формулу для суммы &lt;span class="math"&gt;\(1^5 + 2^5 + 3^5 + \ldots + n^5\)&lt;/span&gt; и есть ли она&amp;nbsp;вообще?&lt;/p&gt;
 &lt;script type="text/javascript"&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = '//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
     mathjaxscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
         "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
-        "    displayAlign: 'center'," +
-        "    displayIndent: '0em'," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
         "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
         "    tex2jax: { " +
         "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
         "        displayMath: [ ['$$','$$'] ]," +
@@ -21,9 +32,80 @@
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
-        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'black ! important'} }" +
-        "    } " +
-        "}); ";
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-&lt;/script&gt;</summary><category term="математика"></category></entry><entry><title>Wallabag и реальная жизнь</title><link href="http://likemath.ru/posts/wallabag-i-realnaia-zhizn/" rel="alternate"></link><published>2016-03-17T13:35:00+03:00</published><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-03-17:posts/wallabag-i-realnaia-zhizn/</id><summary type="html">&lt;p&gt;Как я устанавливал известнейшее свободное решение для отложенного чтения, и что из этого&amp;nbsp;получилось.&lt;/p&gt;</summary><category term="wallabag"></category><category term="open source"></category><category term="Go"></category></entry><entry><title>Мой первый пост</title><link href="http://likemath.ru/posts/moi-pervyi-post/" rel="alternate"></link><published>2015-04-17T13:35:00+03:00</published><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2015-04-17:posts/moi-pervyi-post/</id><summary type="html">&lt;p&gt;Кратко о том, почему я сделал&amp;nbsp;блог.&lt;/p&gt;</summary><category term="блог"></category></entry></feed>
+&lt;/script&gt;&lt;script type='text/javascript'&gt;if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+    var align = "center",
+        indent = "0em",
+        linebreak = "false";
+
+    if (false) {
+        align = (screen.width &lt; 768) ? "left" : align;
+        indent = (screen.width &lt; 768) ? "0em" : indent;
+        linebreak = (screen.width &lt; 768) ? 'true' : linebreak;
+    }
+
+    var mathjaxscript = document.createElement('script');
+    mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
+    mathjaxscript.type = 'text/javascript';
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
+    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+        "MathJax.Hub.Config({" +
+        "    config: ['MMLorHTML.js']," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
+        "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
+        "    displayAlign: '"+ align +"'," +
+        "    displayIndent: '"+ indent +"'," +
+        "    showMathMenu: true," +
+        "    messageStyle: 'normal'," +
+        "    tex2jax: { " +
+        "        inlineMath: [ ['\\\\(','\\\\)'] ], " +
+        "        displayMath: [ ['$$','$$'] ]," +
+        "        processEscapes: true," +
+        "        preview: 'TeX'," +
+        "    }, " +
+        "    'HTML-CSS': { " +
+        "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
+        "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
+        "    }, " +
+        "}); " +
+        "if ('default' !== 'default') {" +
+            "MathJax.Hub.Register.StartupHook('HTML-CSS Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax['HTML-CSS'].FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+            "MathJax.Hub.Register.StartupHook('SVG Jax Ready',function () {" +
+                "var VARIANT = MathJax.OutputJax.SVG.FONTDATA.VARIANT;" +
+                "VARIANT['normal'].fonts.unshift('MathJax_default');" +
+                "VARIANT['bold'].fonts.unshift('MathJax_default-bold');" +
+                "VARIANT['italic'].fonts.unshift('MathJax_default-italic');" +
+                "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
+            "});" +
+        "}";
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
+}
+&lt;/script&gt;</summary><category term="математика"></category></entry><entry><title>Wallabag и реальная жизнь</title><link href="http://likemath.ru/posts/wallabag-i-realnaia-zhizn/" rel="alternate"></link><published>2016-03-17T13:35:00+03:00</published><updated>2016-03-17T13:35:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2016-03-17:posts/wallabag-i-realnaia-zhizn/</id><summary type="html">&lt;p&gt;Как я устанавливал известнейшее свободное решение для отложенного чтения, и что из этого&amp;nbsp;получилось.&lt;/p&gt;</summary><category term="wallabag"></category><category term="open source"></category><category term="Go"></category></entry><entry><title>Мой первый пост</title><link href="http://likemath.ru/posts/moi-pervyi-post/" rel="alternate"></link><published>2015-04-17T13:35:00+03:00</published><updated>2015-04-17T13:35:00+03:00</updated><author><name>Алексей Лобанов</name></author><id>tag:likemath.ru,2015-04-17:posts/moi-pervyi-post/</id><summary type="html">&lt;p&gt;Кратко о том, почему я сделал&amp;nbsp;блог.&lt;/p&gt;</summary><category term="блог"></category></entry></feed>
