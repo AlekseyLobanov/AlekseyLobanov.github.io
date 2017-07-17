@@ -5,28 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://likemath.ru/</loc>
-<lastmod>2017-07-16T01:54:10-00:00</lastmod>
+<lastmod>2017-07-17T22:23:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://likemath.ru/archives.html</loc>
-<lastmod>2017-07-16T01:54:10-00:00</lastmod>
+<lastmod>2017-07-17T22:23:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://likemath.ru/tags.html</loc>
-<lastmod>2017-07-16T01:54:10-00:00</lastmod>
+<lastmod>2017-07-17T22:23:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://likemath.ru/categories.html</loc>
-<lastmod>2017-07-16T01:54:10-00:00</lastmod>
+<lastmod>2017-07-17T22:23:32-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -41,6 +41,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://likemath.ru/pages/projects.html</loc>
 <lastmod>2015-08-17T00:00:00+03:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://likemath.ru/posts/eksport-partii-s-lichess/</loc>
+<lastmod>2017-07-17T13:35:00+03:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.5</priority>
 </url>
@@ -117,7 +124,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://likemath.ru/category/proekty.html</loc>
-<lastmod>2016-01-10T13:35:00+02:30</lastmod>
+<lastmod>2017-07-17T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -131,7 +138,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://likemath.ru/tag/proekt.html</loc>
-<lastmod>2016-01-10T13:35:00+02:30</lastmod>
+<lastmod>2017-07-17T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -144,8 +151,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://likemath.ru/tag/open-source.html</loc>
-<lastmod>2016-03-17T13:35:00+02:30</lastmod>
+<loc>http://likemath.ru/tag/shakhmaty.html</loc>
+<lastmod>2017-07-17T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -165,13 +172,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://likemath.ru/tag/lichess.html</loc>
-<lastmod>2016-01-10T13:35:00+02:30</lastmod>
-<changefreq>daily</changefreq>
-<priority>0.5</priority>
-</url>
-
-<url>
 <loc>http://likemath.ru/tag/bot.html</loc>
 <lastmod>2016-01-10T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
@@ -179,8 +179,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://likemath.ru/tag/matematika.html</loc>
-<lastmod>2016-07-22T13:35:00+02:30</lastmod>
+<loc>http://likemath.ru/tag/lichess.html</loc>
+<lastmod>2017-07-17T13:35:00+02:30</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://likemath.ru/tag/project-euler.html</loc>
+<lastmod>2016-10-30T17:40:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -207,8 +214,8 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://likemath.ru/tag/project-euler.html</loc>
-<lastmod>2016-10-30T17:40:00+02:30</lastmod>
+<loc>http://likemath.ru/tag/matematika.html</loc>
+<lastmod>2016-07-22T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -235,15 +242,15 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 </url>
 
 <url>
-<loc>http://likemath.ru/tag/shakhmaty.html</loc>
-<lastmod>2016-01-10T13:35:00+02:30</lastmod>
+<loc>http://likemath.ru/tag/open-source.html</loc>
+<lastmod>2016-03-17T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://likemath.ru/author/aleksei-lobanov.html</loc>
-<lastmod>2016-10-30T17:40:00+02:30</lastmod>
+<lastmod>2017-07-17T13:35:00+02:30</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
