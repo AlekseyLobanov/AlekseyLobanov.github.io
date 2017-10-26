@@ -71,3 +71,78 @@ appending to this document.
 View my publicly-auditable identity here: https://keybase.io/hippo23
 
 ==================================================================
+
+==================================================================
+https://keybase.io/hippo23
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://likemath.ru
+  * I am hippo23 (https://keybase.io/hippo23) on keybase.
+  * I have a public key with fingerprint 74EC 0995 0003 65F2 F342  BF8A CC74 65E2 718E 3B72
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101ed854d54dd7e76db605c1d459b96bff0ee02d790ec4c97d8748afd7e6ed451a30a",
+      "fingerprint": "74ec0995000365f2f342bf8acc7465e2718e3b72",
+      "host": "keybase.io",
+      "key_id": "cc7465e2718e3b72",
+      "kid": "0101ed854d54dd7e76db605c1d459b96bff0ee02d790ec4c97d8748afd7e6ed451a30a",
+      "uid": "3b2421c390fa7ffece6ff9cdd39e0519",
+      "username": "hippo23"
+    },
+    "service": {
+      "hostname": "likemath.ru",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1509031279,
+  "expire_in": 157680000,
+  "prev": "c7b6231a569fde203a04127a58d56798641d3b690d9ad9865c288b70c51021e9",
+  "seqno": 16,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1
+
+owGtkn1MVWUcx++9gigsLWCOnAw4vDm4XJ/zfg7iluYySSEbaAR5O+c8z+Ee7vu5
+h9cLWxOyl4XEItZaGIwUQheZgwJN7AXCINCJlS4kXqyBtqFZ2ajoHGb/9Wfbsz17
+fvt8v8/399vvtQdWmSzmUQ3N+I9sVc0j86Kp4PZfWhATvbASywxiTrRyIRdEAc3u
+VCCWiQEc4AhyNAX1A1nEMlBkAC3hkKJ5kWdEWQYIAQKyPEASJfEs5FiKE2SdZZAO
+4QIJBMyKyYqnGKk+VfFoui1LIQnwPA0AIBlaJmSSIkSZEySJpRgaESzOIVJkCV3o
+8AYMhR5OFALIpnj1mv6wr8T7D/5/zl26YkeKBEXgEskDWWBlGUmIkWVegpDkEaBx
+3gADSPUIbqTTDsXn8xIkVmPF9GKZIiFjrkYj9wGX4kRuQXPY1FJd6VO9mlfyugyl
+pvkCmYZQq/QZZDkS7fc97KLigfoUdUUZUgOK14Nl4jopaYphitOAByROsLwVQxU+
+RUV2xSBoluH0MQPjH1RmzIwVGYLEBfoAw8sQEYAUAKXrBJqDNMPyHEPhkBQZHkBe
+gPqTlgiOE1kg0TggcGQ0G0B+j1c3Z/SgQrFuGlCKPYJWqiKsJvxly6YQk9liWh1q
+MRbMFL72wX+3bkPe+mXBiiX+9kJhxtHBgpziBR8Xwpx0xKe3K584D3eC8N5jNf1N
+qeDrjg/R8vexmV3X2+fq3AHrxYcjLtlC21LOvp1/aShrYnbzxqTa1A/a3ikfFum4
+rNzJkP3bvrmxuWnCk1XiZKa7O15MKFl0cD/8ePwYFlXRmvL7QPNkX/q2Uq3WEigP
+us59nJQund9kUZijFzv/7IqufPIVx4XGw0XTv3717ktW9ZF6pkFOzr6KkhNLd8PX
+iwrTzs0cCt0l9xxIm/XN3YkR71ZtOPSteWx1l62gc2aPM978vjsyY+bnYSEh2G/u
+GcqZCL26773nNualjsw0lZ/ZO99TX3iiqOiN41tH2lsqBlyP56WfjqxLKPv8sxMx
+O9aFxVyee/ouYiv8t6LfAs/vq2422fZHvWkf37W4JF+55k74VDw90PBM60L2WtHN
+LlUd8fsS3WMRf+BTzYupucWtkV3VlX3jgwe3lwhTS91tC8yXo01Zp2zZwV92j1fH
+/tQYKZbF1t7bkyDhf+dUzUblBm/GZkXcSA6bmkzB57/Qdlzurhi6k9/gudmLRXXZ
+Z0OqlnqjL0Qvx7+6Xjh/r/HsSX9cWmrRzjUP9TGOtJZ1j44O387wePN3QiTu3XI9
+rLzj1hOnCgq3ZNefiXZdWzO8Krj92RzqMX/YwY+s38VFXmlrqbOp2weTnupGfnJs
+uj8U/gM=
+=G9Go
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/hippo23
+
+==================================================================
+
