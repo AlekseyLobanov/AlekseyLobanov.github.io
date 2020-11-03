@@ -1,112 +1,112 @@
-<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class="no-js"> <head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><title>Моё решение задачи 146</title><meta name="description" content><meta name="viewport" content="width=device-width"><link rel="stylesheet" href="../../theme/css/normalize.css"><link href="https://fonts.googleapis.com/css?family=Forum|Oswald|PT+Sans|Philosopher|Ubuntu+Mono" rel="stylesheet"><link rel="stylesheet" href="../../theme/css/font-awesome.min.css"><link rel="stylesheet" href="../../theme/css/main.css"><link rel="stylesheet" href="../../theme/css/blog.css"><link rel="stylesheet" href="../../theme/css/github.css"><link href="https://likemath.ru/feeds/all.atom.xml" type="application/atom+xml" rel="alternate" title="Блог 529 Atom Feed"><link href="https://likemath.ru/feeds/all.rss.xml" type="application/rss+xml" rel="alternate" title="Блог 529 RSS Feed"><script src="../../theme/js/vendor/modernizr-2.6.2.min.js"></script></head><body><!--[if lt IE 7]>
+<!DOCTYPE html><!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]--><!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]--><!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]--><!--[if gt IE 8]><!--><html class=no-js> <!--<![endif]--> <head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1"><title>Моё решение задачи 146</title><meta name=description content><meta name=viewport content="width=device-width"><link rel=stylesheet href=../../theme/css/normalize.css><link href="https://fonts.googleapis.com/css?family=Forum|Oswald|PT+Sans|Philosopher|Ubuntu+Mono" rel=stylesheet><link rel=stylesheet href=../../theme/css/font-awesome.min.css><link rel=stylesheet href=../../theme/css/main.css><link rel=stylesheet href=../../theme/css/blog.css><link rel=stylesheet href=../../theme/css/github.css><link href=https://likemath.ru/feeds/all.atom.xml type=application/atom+xml rel=alternate title="Блог 529 Atom Feed"><link href=https://likemath.ru/feeds/all.rss.xml type=application/rss+xml rel=alternate title="Блог 529 RSS Feed"><script src=../../theme/js/vendor/modernizr-2.6.2.min.js></script></head> <body> <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
-        <![endif]--><div id="wrapper"><header id="sidebar" class="side-shadow"><hgroup id="site-header"><a id="site-title" href="../.."><h2><i class="icon-pencil"></i> Блог 529</h2></a><p id="site-desc"> Project Euler и остальное </p></hgroup><nav><ul id="nav-links"><li><a href="../../">Главная</a></li><li><a href="../../pages/projects.html">Мои проекты</a></li><li><a href="../../pages/about.html">Об авторе</a></li><li><a href="../../feeds/feed.atom.xml">Atom feed</a></li></ul></nav><footer id="site-info"><p> Powered by Pelican. </p></footer></header><div id="post-container"><ol id="post-list"><li><article class="post-entry"><header class="entry-header"><time class="post-time" datetime="2016-10-21T17:40:00+03:00" pubdate> Пт 21 Октябрь 2016 </time><a href="../../posts/moio-reshenie-zadachi-146/" rel="bookmark"><h1>Моё решение задачи&nbsp;146</h1></a></header><section class="post-content"><p>Необходимо найти сумму всех натуральных <span class="math">\(n\)</span>, что <span class="math">\(n^2+1\)</span>, <span class="math">\(n^2+3\)</span>, <span class="math">\(n^2+7\)</span>, <span class="math">\(n^2+9\)</span>, <span class="math">\(n^2+13\)</span>, и <span class="math">\(n^2+27\)</span> будут <em>последовательными</em> простыми&nbsp;числами.</p><p>Полное условие можно найти <a href="https://projecteuler.net/problem=146">тут</a></p><p>Хочется отметить, что сложность у задачи 50%, а на текущий момент её решило меньше 4000 человек. Тем не менее, мне она показалось простой. Простейшее решение отработало очень&nbsp;быстро.</p><p>Для начала, можно отметить, что в лоб проверять условие очень долго. Проверять на простоту числа порядка <span class="math">\(10^{15}\)</span> достаточно сложно, поэтому их нужно как-то&nbsp;отсеять.</p><p>Самое простое &#8212; не рассматривать те <span class="math">\(n\)</span>, что хотя бы одно из <span class="math">\(n^2+1\)</span>, <span class="math">\(n^2+3\)</span>, <span class="math">\(n^2+7\)</span>, <span class="math">\(n^2+9\)</span>, <span class="math">\(n^2+13\)</span>, и <span class="math">\(n^2+27\)</span> будет заведомо делиться на какое-то маленькое простое число. Это даёт достаточно хорошие результаты: из 150 миллионов чисел, после отсеивания по простым числам <span class="math">\(&lt; 3000\)</span> (этот параметр я подбирал уже после решения задач: если он слишком маленький, то будет слишком много проверок на простоту, если же слишком большой, то мы делаем слишком много работы, чтобы отсеять несколько чисел), останется меньше <span class="math">\(2000\)</span> чисел. Их уже можно проверить&nbsp;непосредственно. </p><p>Тогда алгоритм может быть&nbsp;таким:</p><ol><li>Находим простые числа меньше <span class="math">\(3000\)</span>.</li><li>Для каждого из них находим допустимые&nbsp;остатки.</li><li>Для каждого из чисел от <span class="math">\(1\)</span> до <span class="math">\(n\)</span> проверяем, что остатки по всем простым&nbsp;хорошие.</li><li>Непосредственно проверяем условие. Важно не забыть проверить <strong>не</strong>простоту оставшихся нечётных чисел из диапазона <span class="math">\(n^2 + 1 \ldots n^2 + 27\)</span> там могут быть (и будут!) другие простые&nbsp;числа.</li></ol><p>Непосредственно сам поиск такой клики можно реализовать тривиально. Ниже мой код на C++11 с использованием библиотек Flint и primesieve. Распараллеливание хоть и просится, но смысла не имеет, т.к. я получил ответ менее, чем за 5&nbsp;секунд.</p><div class="highlight"><pre><span class="code-line"><span></span><span class="cm">/*</span></span>
-<span class="code-line"><span class="cm"> * Problem 146 on Project Euler</span></span>
-<span class="code-line"><span class="cm"> * Aleksey Lobanov (c) 2016</span></span>
-<span class="code-line"><span class="cm"> */</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;iostream&gt;</span><span class="cp"></span></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;vector&gt;</span><span class="cp"></span></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;cstdint&gt;</span><span class="cp"></span></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;set&gt;</span><span class="cp"></span></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;iomanip&gt;</span><span class="cp"></span></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&lt;algorithm&gt;</span><span class="cp"></span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&quot;fmpzxx.h&quot;</span><span class="cp"></span></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&quot;arithxx.h&quot;</span><span class="cp"></span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="cp">#include</span> <span class="cpf">&quot;primesieve.hpp&quot;</span><span class="cp"></span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="k">using</span> <span class="k">namespace</span> <span class="n">std</span><span class="p">;</span></span>
-<span class="code-line"><span class="k">using</span> <span class="k">namespace</span> <span class="n">flint</span><span class="p">;</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="kt">bool</span> <span class="nf">is_prime</span><span class="p">(</span><span class="kt">int64_t</span> <span class="n">num</span><span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">    <span class="n">fmpz_factorxx</span> <span class="n">fact</span><span class="p">;</span></span>
-<span class="code-line">    <span class="n">fact</span><span class="p">.</span><span class="n">set_factor</span><span class="p">(</span><span class="n">num</span><span class="p">);</span></span>
-<span class="code-line">    <span class="k">if</span> <span class="p">(</span> <span class="n">fact</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">!=</span> <span class="mi">1</span> <span class="p">)</span></span>
-<span class="code-line">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">if</span> <span class="p">(</span> <span class="n">fact</span><span class="p">.</span><span class="n">exp</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">1</span><span class="p">)</span> </span>
-<span class="code-line">        <span class="k">return</span> <span class="nb">false</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span></span>
-<span class="code-line"><span class="p">}</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="kt">bool</span> <span class="nf">is_possible</span><span class="p">(</span><span class="kt">int64_t</span> <span class="n">num</span><span class="p">,</span> <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="o">&amp;</span><span class="n">to_add</span><span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">add</span><span class="p">:</span> <span class="n">to_add</span><span class="p">)</span></span>
-<span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="o">*</span><span class="n">num</span> <span class="o">+</span> <span class="n">add</span><span class="p">)</span> <span class="p">)</span></span>
-<span class="code-line">            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="c1">// primes must be consecutive</span></span>
-<span class="code-line">    <span class="c1">// so we need check, that other numbers like n^2 + i is not primes</span></span>
-<span class="code-line">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="n">other_adds</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">i</span> <span class="o">=</span> <span class="n">to_add</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="mi">2</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">to_add</span><span class="p">[</span><span class="n">to_add</span><span class="p">.</span><span class="n">size</span><span class="p">()</span> <span class="o">-</span> <span class="mi">1</span><span class="p">];</span> <span class="n">i</span> <span class="o">+=</span> <span class="mi">2</span><span class="p">)</span> </span>
-<span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">binary_search</span><span class="p">(</span><span class="n">to_add</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">to_add</span><span class="p">.</span><span class="n">end</span><span class="p">(),</span> <span class="n">i</span><span class="p">)</span> <span class="p">)</span></span>
-<span class="code-line">            <span class="n">other_adds</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">i</span><span class="p">);</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">add</span><span class="p">:</span> <span class="n">other_adds</span><span class="p">)</span></span>
-<span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="n">is_prime</span><span class="p">(</span><span class="n">num</span><span class="o">*</span><span class="n">num</span> <span class="o">+</span> <span class="n">add</span><span class="p">)</span> <span class="p">)</span></span>
-<span class="code-line">            <span class="k">return</span> <span class="nb">false</span><span class="p">;</span>    </span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">return</span> <span class="nb">true</span><span class="p">;</span></span>
-<span class="code-line"><span class="p">}</span></span>
-<span class="code-line"></span>
-<span class="code-line"><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span> <span class="p">{</span></span>
-<span class="code-line">    <span class="k">const</span> <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="n">to_add</span> <span class="o">=</span> <span class="p">{</span><span class="mi">1</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">7</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="mi">27</span><span class="p">};</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">const</span> <span class="kt">int64_t</span> <span class="n">MAX_N</span> <span class="o">=</span> <span class="mi">1l</span><span class="o">*</span><span class="mi">150</span><span class="o">*</span><span class="mi">1000</span><span class="o">*</span><span class="mi">1000</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">const</span> <span class="kt">int64_t</span> <span class="n">MAX_PRIME</span> <span class="o">=</span> <span class="mi">3000</span><span class="p">;</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="n">sieve_primes</span><span class="p">;</span></span>
-<span class="code-line">    <span class="n">primesieve</span><span class="o">::</span><span class="n">generate_primes</span><span class="p">(</span><span class="n">MAX_PRIME</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">sieve_primes</span><span class="p">);</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="n">vector</span><span class="o">&lt;</span> <span class="n">vector</span> <span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="o">&gt;</span> <span class="n">good_remainders</span><span class="p">;</span> </span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">prime</span><span class="p">:</span> <span class="n">sieve_primes</span><span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">        <span class="n">set</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="n">remainders</span><span class="p">;</span></span>
-<span class="code-line">        <span class="k">for</span><span class="p">(</span><span class="kt">int64_t</span> <span class="n">rem</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">rem</span> <span class="o">&lt;</span> <span class="n">prime</span><span class="p">;</span> <span class="o">++</span><span class="n">rem</span><span class="p">)</span></span>
-<span class="code-line">            <span class="n">remainders</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">rem</span><span class="p">);</span></span>
-<span class="code-line"></span>
-<span class="code-line">        <span class="n">set</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span> <span class="n">base_remainders</span><span class="p">;</span></span>
-<span class="code-line">        <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">base</span><span class="p">:</span> <span class="n">to_add</span><span class="p">)</span></span>
-<span class="code-line">            <span class="n">base_remainders</span><span class="p">.</span><span class="n">insert</span><span class="p">(</span><span class="n">base</span> <span class="o">%</span> <span class="n">prime</span><span class="p">);</span></span>
-<span class="code-line"></span>
-<span class="code-line">        <span class="k">for</span> <span class="p">(</span><span class="kt">int64_t</span> <span class="n">rem</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">rem</span> <span class="o">&lt;</span> <span class="n">prime</span><span class="p">;</span> <span class="o">++</span><span class="n">rem</span><span class="p">)</span></span>
-<span class="code-line">            <span class="k">for</span> <span class="p">(</span><span class="k">auto</span> <span class="o">&amp;&amp;</span><span class="nl">base_rem</span><span class="p">:</span> <span class="n">base_remainders</span><span class="p">)</span></span>
-<span class="code-line">                <span class="k">if</span> <span class="p">(</span> <span class="p">(</span><span class="n">rem</span><span class="o">*</span><span class="n">rem</span> <span class="o">+</span> <span class="n">base_rem</span><span class="p">)</span> <span class="o">%</span> <span class="n">prime</span> <span class="o">==</span> <span class="mi">0</span> <span class="p">)</span></span>
-<span class="code-line">                    <span class="n">remainders</span><span class="p">.</span><span class="n">erase</span><span class="p">(</span><span class="n">rem</span><span class="p">);</span></span>
-<span class="code-line"></span>
-<span class="code-line">        <span class="n">good_remainders</span><span class="p">.</span><span class="n">push_back</span><span class="p">(</span><span class="n">vector</span><span class="o">&lt;</span><span class="kt">int64_t</span><span class="o">&gt;</span><span class="p">(</span><span class="n">remainders</span><span class="p">.</span><span class="n">begin</span><span class="p">(),</span> <span class="n">remainders</span><span class="p">.</span><span class="n">end</span><span class="p">()));</span></span>
-<span class="code-line">    <span class="p">}</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="kt">size_t</span> <span class="n">cnt</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></span>
-<span class="code-line">    <span class="kt">size_t</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="cm">/* WARNING</span></span>
-<span class="code-line"><span class="cm">     * for small n can be that</span></span>
-<span class="code-line"><span class="cm">     * n^2 + [1 or 3 or .. ] is prime in sieve primes</span></span>
-<span class="code-line"><span class="cm">     * but there is only one n &lt; 315410 is 10,</span></span>
-<span class="code-line"><span class="cm">     * so we need add 10 to n</span></span>
-<span class="code-line"><span class="cm">     */</span></span>
-<span class="code-line">    <span class="n">sum</span> <span class="o">+=</span> <span class="mi">10</span><span class="p">;</span></span>
-<span class="code-line"></span>
-<span class="code-line">    <span class="k">for</span> <span class="p">(</span><span class="kt">int64_t</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">MAX_N</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">        <span class="kt">bool</span> <span class="n">is_good</span> <span class="o">=</span> <span class="nb">true</span><span class="p">;</span></span>
-<span class="code-line">        <span class="k">for</span> <span class="p">(</span><span class="kt">size_t</span> <span class="n">prime_ind</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">prime_ind</span> <span class="o">&lt;</span> <span class="n">sieve_primes</span><span class="p">.</span><span class="n">size</span><span class="p">();</span> <span class="o">++</span><span class="n">prime_ind</span><span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">            <span class="k">if</span> <span class="p">(</span> <span class="o">!</span><span class="n">binary_search</span><span class="p">(</span><span class="n">good_remainders</span><span class="p">[</span><span class="n">prime_ind</span><span class="p">].</span><span class="n">begin</span><span class="p">(),</span> <span class="n">good_remainders</span><span class="p">[</span><span class="n">prime_ind</span><span class="p">].</span><span class="n">end</span><span class="p">(),</span> <span class="n">i</span> <span class="o">%</span> <span class="n">sieve_primes</span><span class="p">[</span><span class="n">prime_ind</span><span class="p">])</span> <span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">                <span class="n">is_good</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span></span>
-<span class="code-line">                <span class="k">break</span><span class="p">;</span></span>
-<span class="code-line">            <span class="p">}</span></span>
-<span class="code-line">        <span class="p">}</span></span>
-<span class="code-line">        <span class="k">if</span> <span class="p">(</span> <span class="n">is_good</span> <span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">            <span class="n">cnt</span><span class="o">++</span><span class="p">;</span></span>
-<span class="code-line">            <span class="k">if</span> <span class="p">(</span> <span class="n">is_possible</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">to_add</span><span class="p">)</span> <span class="p">)</span> <span class="p">{</span></span>
-<span class="code-line">                <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span></span>
-<span class="code-line">            <span class="p">}</span>          </span>
-<span class="code-line">        <span class="p">}</span></span>
-<span class="code-line">    <span class="p">}</span></span>
-<span class="code-line">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;count = &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">cnt</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></span>
-<span class="code-line">    <span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">&quot;Result is: &quot;</span> <span class="o">&lt;&lt;</span> <span class="n">sum</span> <span class="o">&lt;&lt;</span> <span class="n">endl</span><span class="p">;</span></span>
-<span class="code-line">    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span></span>
-<span class="code-line"><span class="p">}</span></span>
-</pre></div><p>Ответ: <strong>676333270</strong></p><script type="text/javascript">if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
+        <![endif]--> <div id=wrapper> <header id=sidebar class=side-shadow> <hgroup id=site-header> <a id=site-title href=../..><h2><i class=icon-pencil></i> Блог 529</h2></a> <p id=site-desc> Project Euler и остальное </p> </hgroup> <nav> <ul id=nav-links> <li><a href=../../ >Главная</a></li> <li><a href=../../pages/projects.html>Мои проекты</a></li> <li><a href=../../pages/about.html>Об авторе</a></li> <li><a href=../../feeds/feed.atom.xml>Atom feed</a></li> </ul> </nav> <footer id=site-info> <p> Powered by Pelican. </p> </footer></header> <div id=post-container> <ol id=post-list> <li> <article class=post-entry> <header class=entry-header> <time class=post-time datetime=2016-10-21T17:40:00+03:00 pubdate> Пт 21 октября 2016 </time> <a href=../../posts/moio-reshenie-zadachi-146/ rel=bookmark><h1>Моё решение задачи&nbsp;146</h1></a> </header> <section class=post-content> <p>Необходимо найти сумму всех натуральных <span class=math>\(n\)</span>, что <span class=math>\(n^2+1\)</span>, <span class=math>\(n^2+3\)</span>, <span class=math>\(n^2+7\)</span>, <span class=math>\(n^2+9\)</span>, <span class=math>\(n^2+13\)</span>, и <span class=math>\(n^2+27\)</span> будут <em>последовательными</em> простыми&nbsp;числами.</p> <p>Полное условие можно найти <a href="https://projecteuler.net/problem=146">тут</a></p> <p>Хочется отметить, что сложность у задачи 50%, а на текущий момент её решило меньше 4000 человек. Тем не менее, мне она показалось простой. Простейшее решение отработало очень&nbsp;быстро.</p> <p>Для начала, можно отметить, что в лоб проверять условие очень долго. Проверять на простоту числа порядка <span class=math>\(10^{15}\)</span> достаточно сложно, поэтому их нужно как-то&nbsp;отсеять.</p> <p>Самое простое &#8212; не рассматривать те <span class=math>\(n\)</span>, что хотя бы одно из <span class=math>\(n^2+1\)</span>, <span class=math>\(n^2+3\)</span>, <span class=math>\(n^2+7\)</span>, <span class=math>\(n^2+9\)</span>, <span class=math>\(n^2+13\)</span>, и <span class=math>\(n^2+27\)</span> будет заведомо делиться на какое-то маленькое простое число. Это даёт достаточно хорошие результаты: из 150 миллионов чисел, после отсеивания по простым числам <span class=math>\(&lt; 3000\)</span> (этот параметр я подбирал уже после решения задач: если он слишком маленький, то будет слишком много проверок на простоту, если же слишком большой, то мы делаем слишком много работы, чтобы отсеять несколько чисел), останется меньше <span class=math>\(2000\)</span> чисел. Их уже можно проверить&nbsp;непосредственно. </p> <p>Тогда алгоритм может быть&nbsp;таким:</p> <ol> <li>Находим простые числа меньше <span class=math>\(3000\)</span>.</li> <li>Для каждого из них находим допустимые&nbsp;остатки.</li> <li>Для каждого из чисел от <span class=math>\(1\)</span> до <span class=math>\(n\)</span> проверяем, что остатки по всем простым&nbsp;хорошие.</li> <li>Непосредственно проверяем условие. Важно не забыть проверить <strong>не</strong>простоту оставшихся нечётных чисел из диапазона <span class=math>\(n^2 + 1 \ldots n^2 + 27\)</span> там могут быть (и будут!) другие простые&nbsp;числа.</li> </ol> <p>Непосредственно сам поиск такой клики можно реализовать тривиально. Ниже мой код на C++11 с использованием библиотек Flint и primesieve. Распараллеливание хоть и просится, но смысла не имеет, т.к. я получил ответ менее, чем за 5&nbsp;секунд.</p> <div class=highlight><pre><span class=code-line><span></span><span class=cm>/*</span></span>
+<span class=code-line><span class=cm> * Problem 146 on Project Euler</span></span>
+<span class=code-line><span class=cm> * Aleksey Lobanov (c) 2016</span></span>
+<span class=code-line><span class=cm> */</span></span>
+<span class=code-line></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&lt;iostream&gt;</span><span class=cp></span></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&lt;vector&gt;</span><span class=cp></span></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&lt;cstdint&gt;</span><span class=cp></span></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&lt;set&gt;</span><span class=cp></span></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&lt;iomanip&gt;</span><span class=cp></span></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&lt;algorithm&gt;</span><span class=cp></span></span>
+<span class=code-line></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&quot;fmpzxx.h&quot;</span><span class=cp></span></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&quot;arithxx.h&quot;</span><span class=cp></span></span>
+<span class=code-line></span>
+<span class=code-line><span class=cp>#include</span> <span class=cpf>&quot;primesieve.hpp&quot;</span><span class=cp></span></span>
+<span class=code-line></span>
+<span class=code-line><span class=k>using</span> <span class=k>namespace</span> <span class=n>std</span><span class=p>;</span></span>
+<span class=code-line><span class=k>using</span> <span class=k>namespace</span> <span class=n>flint</span><span class=p>;</span></span>
+<span class=code-line></span>
+<span class=code-line><span class=kt>bool</span> <span class=nf>is_prime</span><span class=p>(</span><span class=kt>int64_t</span> <span class=n>num</span><span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>    <span class=n>fmpz_factorxx</span> <span class=n>fact</span><span class=p>;</span></span>
+<span class=code-line>    <span class=n>fact</span><span class=p>.</span><span class=n>set_factor</span><span class=p>(</span><span class=n>num</span><span class=p>);</span></span>
+<span class=code-line>    <span class=k>if</span> <span class=p>(</span> <span class=n>fact</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>!=</span> <span class=mi>1</span> <span class=p>)</span></span>
+<span class=code-line>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span></span>
+<span class=code-line>    <span class=k>if</span> <span class=p>(</span> <span class=n>fact</span><span class=p>.</span><span class=n>exp</span><span class=p>(</span><span class=mi>0</span><span class=p>)</span> <span class=o>!=</span> <span class=mi>1</span><span class=p>)</span> </span>
+<span class=code-line>        <span class=k>return</span> <span class=nb>false</span><span class=p>;</span></span>
+<span class=code-line>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span></span>
+<span class=code-line><span class=p>}</span></span>
+<span class=code-line></span>
+<span class=code-line><span class=kt>bool</span> <span class=nf>is_possible</span><span class=p>(</span><span class=kt>int64_t</span> <span class=n>num</span><span class=p>,</span> <span class=k>const</span> <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=o>&amp;</span><span class=n>to_add</span><span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>    <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>add</span><span class=p>:</span> <span class=n>to_add</span><span class=p>)</span></span>
+<span class=code-line>        <span class=k>if</span> <span class=p>(</span> <span class=o>!</span><span class=n>is_prime</span><span class=p>(</span><span class=n>num</span><span class=o>*</span><span class=n>num</span> <span class=o>+</span> <span class=n>add</span><span class=p>)</span> <span class=p>)</span></span>
+<span class=code-line>            <span class=k>return</span> <span class=nb>false</span><span class=p>;</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=c1>// primes must be consecutive</span></span>
+<span class=code-line>    <span class=c1>// so we need check, that other numbers like n^2 + i is not primes</span></span>
+<span class=code-line>    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=n>other_adds</span><span class=p>;</span></span>
+<span class=code-line>    <span class=k>for</span> <span class=p>(</span><span class=kt>size_t</span> <span class=n>i</span> <span class=o>=</span> <span class=n>to_add</span><span class=p>[</span><span class=mi>0</span><span class=p>]</span> <span class=o>+</span> <span class=mi>2</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>to_add</span><span class=p>[</span><span class=n>to_add</span><span class=p>.</span><span class=n>size</span><span class=p>()</span> <span class=o>-</span> <span class=mi>1</span><span class=p>];</span> <span class=n>i</span> <span class=o>+=</span> <span class=mi>2</span><span class=p>)</span> </span>
+<span class=code-line>        <span class=k>if</span> <span class=p>(</span> <span class=o>!</span><span class=n>binary_search</span><span class=p>(</span><span class=n>to_add</span><span class=p>.</span><span class=n>begin</span><span class=p>(),</span> <span class=n>to_add</span><span class=p>.</span><span class=n>end</span><span class=p>(),</span> <span class=n>i</span><span class=p>)</span> <span class=p>)</span></span>
+<span class=code-line>            <span class=n>other_adds</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=n>i</span><span class=p>);</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>add</span><span class=p>:</span> <span class=n>other_adds</span><span class=p>)</span></span>
+<span class=code-line>        <span class=k>if</span> <span class=p>(</span> <span class=n>is_prime</span><span class=p>(</span><span class=n>num</span><span class=o>*</span><span class=n>num</span> <span class=o>+</span> <span class=n>add</span><span class=p>)</span> <span class=p>)</span></span>
+<span class=code-line>            <span class=k>return</span> <span class=nb>false</span><span class=p>;</span>    </span>
+<span class=code-line></span>
+<span class=code-line>    <span class=k>return</span> <span class=nb>true</span><span class=p>;</span></span>
+<span class=code-line><span class=p>}</span></span>
+<span class=code-line></span>
+<span class=code-line><span class=kt>int</span> <span class=nf>main</span><span class=p>()</span> <span class=p>{</span></span>
+<span class=code-line>    <span class=k>const</span> <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=n>to_add</span> <span class=o>=</span> <span class=p>{</span><span class=mi>1</span><span class=p>,</span> <span class=mi>3</span><span class=p>,</span> <span class=mi>7</span><span class=p>,</span> <span class=mi>9</span><span class=p>,</span> <span class=mi>13</span><span class=p>,</span> <span class=mi>27</span><span class=p>};</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=k>const</span> <span class=kt>int64_t</span> <span class=n>MAX_N</span> <span class=o>=</span> <span class=mi>1l</span><span class=o>*</span><span class=mi>150</span><span class=o>*</span><span class=mi>1000</span><span class=o>*</span><span class=mi>1000</span><span class=p>;</span></span>
+<span class=code-line>    <span class=k>const</span> <span class=kt>int64_t</span> <span class=n>MAX_PRIME</span> <span class=o>=</span> <span class=mi>3000</span><span class=p>;</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=n>vector</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=n>sieve_primes</span><span class=p>;</span></span>
+<span class=code-line>    <span class=n>primesieve</span><span class=o>::</span><span class=n>generate_primes</span><span class=p>(</span><span class=n>MAX_PRIME</span><span class=p>,</span> <span class=o>&amp;</span><span class=n>sieve_primes</span><span class=p>);</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=n>vector</span><span class=o>&lt;</span> <span class=n>vector</span> <span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=o>&gt;</span> <span class=n>good_remainders</span><span class=p>;</span> </span>
+<span class=code-line>    <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>prime</span><span class=p>:</span> <span class=n>sieve_primes</span><span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>        <span class=n>set</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=n>remainders</span><span class=p>;</span></span>
+<span class=code-line>        <span class=k>for</span><span class=p>(</span><span class=kt>int64_t</span> <span class=n>rem</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>rem</span> <span class=o>&lt;</span> <span class=n>prime</span><span class=p>;</span> <span class=o>++</span><span class=n>rem</span><span class=p>)</span></span>
+<span class=code-line>            <span class=n>remainders</span><span class=p>.</span><span class=n>insert</span><span class=p>(</span><span class=n>rem</span><span class=p>);</span></span>
+<span class=code-line></span>
+<span class=code-line>        <span class=n>set</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span> <span class=n>base_remainders</span><span class=p>;</span></span>
+<span class=code-line>        <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>base</span><span class=p>:</span> <span class=n>to_add</span><span class=p>)</span></span>
+<span class=code-line>            <span class=n>base_remainders</span><span class=p>.</span><span class=n>insert</span><span class=p>(</span><span class=n>base</span> <span class=o>%</span> <span class=n>prime</span><span class=p>);</span></span>
+<span class=code-line></span>
+<span class=code-line>        <span class=k>for</span> <span class=p>(</span><span class=kt>int64_t</span> <span class=n>rem</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>rem</span> <span class=o>&lt;</span> <span class=n>prime</span><span class=p>;</span> <span class=o>++</span><span class=n>rem</span><span class=p>)</span></span>
+<span class=code-line>            <span class=k>for</span> <span class=p>(</span><span class=k>auto</span> <span class=o>&amp;&amp;</span><span class=nl>base_rem</span><span class=p>:</span> <span class=n>base_remainders</span><span class=p>)</span></span>
+<span class=code-line>                <span class=k>if</span> <span class=p>(</span> <span class=p>(</span><span class=n>rem</span><span class=o>*</span><span class=n>rem</span> <span class=o>+</span> <span class=n>base_rem</span><span class=p>)</span> <span class=o>%</span> <span class=n>prime</span> <span class=o>==</span> <span class=mi>0</span> <span class=p>)</span></span>
+<span class=code-line>                    <span class=n>remainders</span><span class=p>.</span><span class=n>erase</span><span class=p>(</span><span class=n>rem</span><span class=p>);</span></span>
+<span class=code-line></span>
+<span class=code-line>        <span class=n>good_remainders</span><span class=p>.</span><span class=n>push_back</span><span class=p>(</span><span class=n>vector</span><span class=o>&lt;</span><span class=kt>int64_t</span><span class=o>&gt;</span><span class=p>(</span><span class=n>remainders</span><span class=p>.</span><span class=n>begin</span><span class=p>(),</span> <span class=n>remainders</span><span class=p>.</span><span class=n>end</span><span class=p>()));</span></span>
+<span class=code-line>    <span class=p>}</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=kt>size_t</span> <span class=n>cnt</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span></span>
+<span class=code-line>    <span class=kt>size_t</span> <span class=n>sum</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=cm>/* WARNING</span></span>
+<span class=code-line><span class=cm>     * for small n can be that</span></span>
+<span class=code-line><span class=cm>     * n^2 + [1 or 3 or .. ] is prime in sieve primes</span></span>
+<span class=code-line><span class=cm>     * but there is only one n &lt; 315410 is 10,</span></span>
+<span class=code-line><span class=cm>     * so we need add 10 to n</span></span>
+<span class=code-line><span class=cm>     */</span></span>
+<span class=code-line>    <span class=n>sum</span> <span class=o>+=</span> <span class=mi>10</span><span class=p>;</span></span>
+<span class=code-line></span>
+<span class=code-line>    <span class=k>for</span> <span class=p>(</span><span class=kt>int64_t</span> <span class=n>i</span> <span class=o>=</span> <span class=mi>1</span><span class=p>;</span> <span class=n>i</span> <span class=o>&lt;</span> <span class=n>MAX_N</span><span class=p>;</span> <span class=o>++</span><span class=n>i</span><span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>        <span class=kt>bool</span> <span class=n>is_good</span> <span class=o>=</span> <span class=nb>true</span><span class=p>;</span></span>
+<span class=code-line>        <span class=k>for</span> <span class=p>(</span><span class=kt>size_t</span> <span class=n>prime_ind</span> <span class=o>=</span> <span class=mi>0</span><span class=p>;</span> <span class=n>prime_ind</span> <span class=o>&lt;</span> <span class=n>sieve_primes</span><span class=p>.</span><span class=n>size</span><span class=p>();</span> <span class=o>++</span><span class=n>prime_ind</span><span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>            <span class=k>if</span> <span class=p>(</span> <span class=o>!</span><span class=n>binary_search</span><span class=p>(</span><span class=n>good_remainders</span><span class=p>[</span><span class=n>prime_ind</span><span class=p>].</span><span class=n>begin</span><span class=p>(),</span> <span class=n>good_remainders</span><span class=p>[</span><span class=n>prime_ind</span><span class=p>].</span><span class=n>end</span><span class=p>(),</span> <span class=n>i</span> <span class=o>%</span> <span class=n>sieve_primes</span><span class=p>[</span><span class=n>prime_ind</span><span class=p>])</span> <span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>                <span class=n>is_good</span> <span class=o>=</span> <span class=nb>false</span><span class=p>;</span></span>
+<span class=code-line>                <span class=k>break</span><span class=p>;</span></span>
+<span class=code-line>            <span class=p>}</span></span>
+<span class=code-line>        <span class=p>}</span></span>
+<span class=code-line>        <span class=k>if</span> <span class=p>(</span> <span class=n>is_good</span> <span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>            <span class=n>cnt</span><span class=o>++</span><span class=p>;</span></span>
+<span class=code-line>            <span class=k>if</span> <span class=p>(</span> <span class=n>is_possible</span><span class=p>(</span><span class=n>i</span><span class=p>,</span> <span class=n>to_add</span><span class=p>)</span> <span class=p>)</span> <span class=p>{</span></span>
+<span class=code-line>                <span class=n>sum</span> <span class=o>+=</span> <span class=n>i</span><span class=p>;</span></span>
+<span class=code-line>            <span class=p>}</span>          </span>
+<span class=code-line>        <span class=p>}</span></span>
+<span class=code-line>    <span class=p>}</span></span>
+<span class=code-line>    <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&quot;count = &quot;</span> <span class=o>&lt;&lt;</span> <span class=n>cnt</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span></span>
+<span class=code-line>    <span class=n>cout</span> <span class=o>&lt;&lt;</span> <span class=s>&quot;Result is: &quot;</span> <span class=o>&lt;&lt;</span> <span class=n>sum</span> <span class=o>&lt;&lt;</span> <span class=n>endl</span><span class=p>;</span></span>
+<span class=code-line>    <span class=k>return</span> <span class=mi>0</span><span class=p>;</span></span>
+<span class=code-line><span class=p>}</span></span>
+</pre></div> <p>Ответ: <strong>676333270</strong></p> <script type=text/javascript>if (!document.getElementById('mathjaxscript_pelican_#%@#$@#')) {
     var align = "center",
         indent = "0em",
         linebreak = "false";
@@ -120,11 +120,14 @@
     var mathjaxscript = document.createElement('script');
     mathjaxscript.id = 'mathjaxscript_pelican_#%@#$@#';
     mathjaxscript.type = 'text/javascript';
-    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML';
-    mathjaxscript[(window.opera ? "innerHTML" : "text")] =
+    mathjaxscript.src = 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.3/latest.js?config=TeX-AMS-MML_HTMLorMML';
+
+    var configscript = document.createElement('script');
+    configscript.type = 'text/x-mathjax-config';
+    configscript[(window.opera ? "innerHTML" : "text")] =
         "MathJax.Hub.Config({" +
         "    config: ['MMLorHTML.js']," +
-        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'AMS' } }," +
+        "    TeX: { extensions: ['AMSmath.js','AMSsymbols.js','noErrors.js','noUndefined.js'], equationNumbers: { autoNumber: 'none' } }," +
         "    jax: ['input/TeX','input/MathML','output/HTML-CSS']," +
         "    extensions: ['tex2jax.js','mml2jax.js','MathMenu.js','MathZoom.js']," +
         "    displayAlign: '"+ align +"'," +
@@ -138,6 +141,8 @@
         "        preview: 'TeX'," +
         "    }, " +
         "    'HTML-CSS': { " +
+        "        availableFonts: ['STIX', 'TeX']," +
+        "        preferredFont: 'STIX'," +
         "        styles: { '.MathJax_Display, .MathJax .mo, .MathJax .mi, .MathJax .mn': {color: 'inherit ! important'} }," +
         "        linebreaks: { automatic: "+ linebreak +", width: '90% container' }," +
         "    }, " +
@@ -158,9 +163,11 @@
                 "VARIANT['-tex-mathit'].fonts.unshift('MathJax_default-italic');" +
             "});" +
         "}";
+
+    (document.body || document.getElementsByTagName('head')[0]).appendChild(configscript);
     (document.body || document.getElementsByTagName('head')[0]).appendChild(mathjaxscript);
 }
-</script></section><hr><aside class="post-meta"><p>Категория: <a href="../../category/project-euler.html">Project Euler</a></p><p>Теги: <a href="../../tag/project-euler.html">Project Euler</a>, <a href="../../tag/c.html">c++</a>, <a href="../../tag/flint.html">FLINT</a>, </p></aside><hr></article></li></ol></div></div><script type="text/javascript">
+</script> </section> <hr> <aside class=post-meta> <p>Категория: <a href=../../category/project-euler.html>Project Euler</a></p> <p>Теги: <a href=../../tag/project-euler.html>Project Euler</a>, <a href=../../tag/c.html>c++</a>, <a href=../../tag/flint.html>FLINT</a>, </p> </aside> <hr> </article> </li> </ol> </div> </div> <script type=text/javascript>
   var _paq = _paq || [];
   _paq.push(['trackPageView']);
   _paq.push(['enableLinkTracking']);
@@ -171,4 +178,4 @@
     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
     g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
   })();
-</script> <script src="../../theme/js/main.js"></script></body></html>
+</script> <script src=../../theme/js/main.js></script> </body> </html>
